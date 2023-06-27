@@ -14,9 +14,6 @@ def get_win_by_name(win_name):
     # get every displayed windows
     wins = ewmh.getClientList()
 
-    active = ewmh.getActiveWindow()
-    print(f'{active}')
-
     for win in wins:
         name = win.get_wm_name()
         wm_id = win.id
