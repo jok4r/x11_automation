@@ -1,5 +1,5 @@
 from ewmh import EWMH
-from win_exists import get_win_by_name
+from .win_exists import get_win_by_name
 
 
 def win_get_process(win_name):

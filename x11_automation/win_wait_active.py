@@ -1,5 +1,5 @@
 from ewmh import EWMH
-from win_exists import get_win_by_name, get_window_name
+from .win_exists import get_win_by_name, get_window_name
 import time
 
 
