@@ -13,4 +13,6 @@ def send(keys_str: str, sec_per_key=0.05):
         keys = [x for x in keys_str]
 
     for key in keys:
+        if key == ' ':
+            key = 'SPACEBAR'
         press(key, sec=sec_per_key)
