@@ -6,6 +6,7 @@ import re
 def win_exists(win_name):
     if get_win_by_name(win_name):
         return True
+    return False
 
 
 def get_win_by_name(win_name):
