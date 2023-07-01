@@ -1,0 +1,5 @@
+pyKey
+ewmh
+opencv-python
+numpy
+mouse
