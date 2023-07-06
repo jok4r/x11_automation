@@ -15,4 +15,6 @@ def send(keys_str: str, sec_per_key=0.05):
     for key in keys:
         if key == ' ':
             key = 'SPACEBAR'
+        elif key == '~':
+            key = 'TILDE'
         press(key, sec=sec_per_key)
