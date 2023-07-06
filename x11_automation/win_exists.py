@@ -1,4 +1,5 @@
 from ewmh import EWMH
+from Xlib.error import BadWindow
 import subprocess
 import re
 
@@ -16,7 +17,10 @@ def get_win_by_name(win_name):
     wins = ewmh.getClientList()
 
     for win in wins:
-        name = win.get_wm_name()
+        try:
+            name = win.get_wm_name()
+        except BadWindow:
+            continue
         wm_id = win.id
         if not name:
             name = get_window_name(wm_id)
