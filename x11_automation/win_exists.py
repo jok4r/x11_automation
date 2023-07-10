@@ -21,7 +21,10 @@ def get_win_by_name(win_name):
             name = win.get_wm_name()
         except BadWindow:
             continue
-        wm_id = win.id
+        if hasattr(win, 'id'):
+            wm_id = win.id
+        else:
+            continue
         if not name:
             name = get_window_name(wm_id)
 
