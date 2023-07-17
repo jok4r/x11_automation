@@ -5,11 +5,12 @@ from ewmh import EWMH
 def get_win_geometry(name):
     ewmh = EWMH()
 
-    win = get_win_by_name(name)['win']
+    win = get_win_by_name(name)
     if win:
         win = win['win']
     else:
         print(f'Cannot find {name} window')
+        return [0] * 4
     geom = win.get_geometry()
     # print(f'{geom=}')
     (x, y, w, h) = (geom.x, geom.y, geom.width, geom.height)
